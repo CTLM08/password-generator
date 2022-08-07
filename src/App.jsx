@@ -29,7 +29,10 @@ const App = () => {
       }
       base+=base2
       
-    } else {
+    } else if (base2=''){
+      setpassword("password")
+    }
+    else {
       base = "error,use brain lah";
     }
     setpassword(base);

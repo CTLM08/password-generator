@@ -32,7 +32,7 @@ const App = () => {
     setpassword(base);
   };
   useEffect(() => {
-    setpassword(" ");
+    ps();
   }, [
     length,
     lower,

@@ -14,7 +14,7 @@ const App = () => {
   const [symbol, setsymbol] = useState(true);
   const [num, setnum] = useState(true);
   
-  const ps = () => {
+  useEffect(() => {
     let ps = "";
     let base = "";
     setpassword("");
@@ -30,7 +30,7 @@ const App = () => {
       base = "error,use brain lah";
     }
     setpassword(base);
-  };
+  },[length,upper,lower,symbol,num])
 
   useEffect(() => {
     console.log("q");

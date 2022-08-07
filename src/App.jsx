@@ -17,7 +17,6 @@ const App = () => {
   const ps = () => {
     let ps = "";
     let base = "";
-    let base2=' ';
     setpassword("");
     if (upper) ps += "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     if (lower) ps += "abcdefghijklmnopqrstuvwxyz";
@@ -25,27 +24,13 @@ const App = () => {
     if (symbol) ps += "!@#$%^&*()_+-={}[]:\";'<>?,./";
     if (length > 0 && length < 100) {
       for (let i = 0; i < length; i++) {
-        base2 += ps[Math.floor(Math.random() * ps.length)];
+        base += ps[Math.floor(Math.random() * ps.length)];
       }
-      base+=base2
-      
-    } else if (base2=''){
-      setpassword("password")
-    }
-    else {
+    } else {
       base = "error,use brain lah";
     }
     setpassword(base);
   };
-  useEffect(() => {
-    ps();
-  }, [
-    length,
-    lower,
-    upper,
-    num,
-    symbol,
-  ]);
 
   useEffect(() => {
     console.log("q");

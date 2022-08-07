@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Alice&family=Cormorant+SC:wght@300&family=Iceberg&family=Nunito:wght@200&family=Prompt:wght@100&family=Roboto:ital,wght@1,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+*{
+    font-family: 'Nunito', sans-serif;
+}

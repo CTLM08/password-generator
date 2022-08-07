@@ -13,8 +13,8 @@ const App = () => {
   const [lower, setlower] = useState(true);
   const [symbol, setsymbol] = useState(true);
   const [num, setnum] = useState(true);
-
-  useEffect(() => {
+  
+  const ps = () => {
     let ps = "";
     let base = "";
     setpassword("");
@@ -26,13 +26,20 @@ const App = () => {
       for (let i = 0; i < length; i++) {
         base += ps[Math.floor(Math.random() * ps.length)];
       }
-    }
-    
-    else {
+    } else {
       base = "error,use brain lah";
     }
     setpassword(base);
-  },[length,upper,lower,symbol,num])
+  };
+  useEffect(() => {
+    generatePassword();
+  }, [
+    length,
+    lower,
+    upper,
+    num,
+    symbol,
+  ]);
 
   useEffect(() => {
     console.log("q");

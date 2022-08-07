@@ -14,7 +14,7 @@ const App = () => {
   const [symbol, setsymbol] = useState(true);
   const [num, setnum] = useState(true);
   useEffect(()=>{
-    if(!ower&& upper && symbol && num){
+    if(lower&& upper && symbol && num){
       setpassword("password")
     }
   },[upper,lower,symbol,num])

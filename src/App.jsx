@@ -22,15 +22,18 @@ const App = () => {
     if (lower) ps += "abcdefghijklmnopqrstuvwxyz";
     if (num) ps += "0123456789";
     if (symbol) ps += "!@#$%^&*()_+-={}[]:\";'<>?,./";
-    if (length > 0 && length < 100) {
+    if (length > 0 && length < 100 ) {
       for (let i = 0; i < length; i++) {
-        base += ps[Math.floor(Math.random() * ps.length)];
+        base += ps[Math.floor(Math.random() * ps.length)] ||'';
       }
     } else {
       base = "error,use brain lah";
     }
     setpassword(base);
   };
+  useEffect(()=>{
+    ps()
+  },[length,upper,lower,symbol,num])
 
   useEffect(() => {
     console.log("q");

@@ -136,8 +136,8 @@ const App = () => {
           </div>
         </div>
         
-
       </div>
+      <Icon icon="charm:face-smile" className="absolute top-0 left-2 h-96 w-96 hover:animate-spin " />
     </div>
     
   );

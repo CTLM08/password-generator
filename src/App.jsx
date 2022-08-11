@@ -120,7 +120,7 @@ const App = () => {
         </div>
 
         <div className="flex  items-center mt-5 gap-2 justify-center animate__animated animate__lightSpeedInLeft">
-          <div className="">password length(0-100):</div>
+          <div className="">password length(1-99):</div>
           <div className="text-3xl mb-2">
             <button onClick={() => setlength(length - 1)}>-</button>{" "}
           </div>
